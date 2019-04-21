@@ -10,4 +10,4 @@ def index(request):
 
 
 def index2(request):
-    return render(request, 'index.html', {'xixi':'This is first page'})
+    return render(request, 'blog/index.html', {'xixi': 'This is first page'})
