@@ -23,3 +23,4 @@ python manage runserver [ip:port]
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
+- [Django教程](http://www.runoob.com/django/django-first-app.html)
