@@ -23,4 +23,5 @@ from . import views
 urlpatterns = [
     path('myindex/', views.index),
     path('index/', views.index2),
+    path('article/', views.getuser),
 ]

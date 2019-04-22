@@ -19,6 +19,10 @@ django-admin startproject myblog
 3. 再执行python manage.py migrate
 4. 执行python manage.py sqlmigrate 应用名 文件id 查看SQL语句
 
+#### 页面呈现数据
+1. views.py中import models
+2. article = models.Article.objects.get(pk=0)
+
 #### 运行
 ```bash
 python manage runserver [ip:port]
