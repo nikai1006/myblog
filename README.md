@@ -23,6 +23,15 @@ django-admin startproject myblog
 1. views.py中import models
 2. article = models.Article.objects.get(pk=0)
 
+#### 配置Admin
+- 创建用户 
+```bash
+python manage.py createsuperuser
+```
+创建了一个超级用户
+
+
+
 #### 运行
 ```bash
 python manage runserver [ip:port]
