@@ -10,6 +10,11 @@
 2. 命令行输入：python manage.py makemigrations [app名]
 3. 再执行python manage.py migrate
 
+#### 运行
+```bash
+python manage runserver [ip:port]
+```
+
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
