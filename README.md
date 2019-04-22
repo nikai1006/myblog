@@ -1,5 +1,10 @@
 # myblog
 
+#### 创建工程
+```bash
+django-admin startproject myblog
+```
+
 #### 创建应用
 1. 打开命令行，进入项目中manage.py同级目录
 2. 命令行输入：python manage.py startapp blog
