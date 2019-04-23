@@ -25,7 +25,10 @@ SECRET_KEY = 's#m!(1xl*$)vm5wz7id4dnrmgg!6c74k84wn!5n#g$dv20agg-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost',
+                 '127.0.0.1',
+                 'nikai.net.cn'
+                 ]
 
 
 # Application definition
