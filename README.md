@@ -30,6 +30,11 @@ python manage.py createsuperuser
 ```
 创建了一个超级用户
 
+#### 修改数据默认显示名称
+1. 在Article类下面添加一个方法
+2. Python3：__str__(self)
+   python2.7: __unicode_(self)
+3. return self.title
 
 
 #### 运行

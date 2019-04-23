@@ -12,7 +12,7 @@ def index(request):
 
 
 def getuser(request):
-    article = models.Article.objects.get(pk=0)
+    article = models.Article.objects.get(pk=1)
     return render(request, 'blog/index2.html', {'article': article})
 
 
