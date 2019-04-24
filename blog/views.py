@@ -18,3 +18,8 @@ def getuser(request):
 
 def index2(request):
     return render(request, 'blog/index.html', {'xixi': 'This is first page'})
+
+
+def getAll(request):
+    articles = models.Article.objects.all()
+    return render(request, 'blog/home.html', {'articles', articles})

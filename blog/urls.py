@@ -24,4 +24,5 @@ urlpatterns = [
     path('myindex/', views.index),
     path('index/', views.index2),
     path('article/', views.getuser),
+    path('articles/', views.getAll),
 ]
