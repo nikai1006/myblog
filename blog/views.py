@@ -22,4 +22,4 @@ def index2(request):
 
 def getAll(request):
     articles = models.Article.objects.all()
-    return render(request, 'blog/home.html', {'articles', articles})
+    return render(request, 'blog/home.html', {'articles': articles})
