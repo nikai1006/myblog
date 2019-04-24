@@ -24,7 +24,7 @@ from blog import views as nikai
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', nikai.index),
-    path('blog/', include('blog.urls')),
+    path('blog/', include('blog.urls', namespace='blog')),
     path('blog2/', include('blog2.urls')),
 
 ]

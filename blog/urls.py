@@ -25,5 +25,5 @@ urlpatterns = [
     path('index/', views.index2),
     path('article/', views.getuser),
     path('articles/', views.getAll),
-    path('^/article/(?P<article_id>[0-9]+)/$', views.homePage),
+    path('^/article/(?P<article_id>[0-9]+)/$', views.homePage, name='article_page'),
 ]
