@@ -23,3 +23,8 @@ def index2(request):
 def getAll(request):
     articles = models.Article.objects.all()
     return render(request, 'blog/home.html', {'articles': articles})
+
+
+def homePage(request, article_id):
+    article = models.Article.objects.get(article_id)
+    return render(request, 'blog/home_page.html', {'article': article})

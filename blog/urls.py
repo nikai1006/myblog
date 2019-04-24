@@ -15,7 +15,7 @@ Including another URLconf
 
     URL配置文件
 """
-from django.urls import path
+from django.urls import path, re_path
 
 # import blog.views as nikai
 from . import views
@@ -25,4 +25,5 @@ urlpatterns = [
     path('index/', views.index2),
     path('article/', views.getuser),
     path('articles/', views.getAll),
+    path('^/article/(?P<article_id>[0-9]+)/$', views.homePage),
 ]
