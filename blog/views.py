@@ -48,4 +48,4 @@ def edit_action(request):
     article.title = title
     article.content = content
     article.save()
-    return render(request, 'blog/home.html', {'articles': models.Article.objects.get()})
+    return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
