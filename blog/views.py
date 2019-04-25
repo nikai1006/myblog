@@ -32,3 +32,10 @@ def getPage(request, article_id):
 
 def edit_page(request):
     return render(request, 'blog/update.html')
+
+
+def edit_action(request):
+    title = request.POST.get('title', 'TITLE')
+    content = request.POST.get('content', 'CONTENT')
+    models.Article.objects.create(title=title, content=content)
+    return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
