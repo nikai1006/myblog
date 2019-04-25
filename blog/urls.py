@@ -29,6 +29,6 @@ urlpatterns = [
     path('article/', views.getuser),
     path('articles/', views.getAll),
     path('article/<int:article_id>/', views.getPage, name='article_page'),
-    path('update/', views.edit_page, name='edit_page'),
+    path('update/<int:article_id>', views.edit_page, name='edit_page'),
     path('edit/action', views.edit_action, name='edit_action')
 ]

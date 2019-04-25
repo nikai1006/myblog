@@ -7,5 +7,7 @@
 <body>
 <h1>{{ article.title }}</h1>
 <h2>{{ article.content }}</h2>
+<br>
+<a href="{% url 'blog:edit_action' article.id %}">修改</a>
 </body>
 </html>

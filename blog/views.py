@@ -30,12 +30,22 @@ def getPage(request, article_id):
     return render(request, 'blog/home_page.html', {'article': article})
 
 
-def edit_page(request):
-    return render(request, 'blog/update.html')
+def edit_page(request, article_id):
+    if str(article_id) == '0':
+        return render(request, 'blog/update.html')
+    article = models.Article.objects.get(pk=article_id)
+    return render(request, 'blog/update.html', {'article': article})
 
 
 def edit_action(request):
     title = request.POST.get('title', 'TITLE')
     content = request.POST.get('content', 'CONTENT')
-    models.Article.objects.create(title=title, content=content)
-    return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
+    article_id = request.POST.get('article_id')
+    if str(article_id) == '0':
+        models.Article.objects.create(title=title, content=content)
+        return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
+    article = models.Article.objects.get(pk=article_id)
+    article.title = title
+    article.content = content
+    article.save()
+    return render(request, 'blog/home.html', {'articles': models.Article.objects.get()})
