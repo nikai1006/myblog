@@ -40,7 +40,7 @@ python manage.py createsuperuser
 #### Django中的超链接
 超链接目标地址
 1. href后面是`目标地址`
-2. template中科院用 target-url 'app_name:url_name' param ,其中app_name和url_name都在url中配置
+2. template中用 target-url 'app_name:url_name' param ,其中app_name和url_name都在url中配置
 
 
 
