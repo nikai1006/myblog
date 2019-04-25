@@ -20,10 +20,13 @@ from django.urls import path, re_path
 # import blog.views as nikai
 from . import views
 
+# 此处的app_name要和myblog种urls中的namespace保持一致
+app_name = "blog"
+
 urlpatterns = [
     path('myindex/', views.index),
     path('index/', views.index2),
     path('article/', views.getuser),
     path('articles/', views.getAll),
-    path('^/article/(?P<article_id>[0-9]+)/$', views.homePage, name='article_page'),
+    path('article/<int:article_id>/', views.getPage, name='article_page'),
 ]

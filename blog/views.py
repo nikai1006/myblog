@@ -25,6 +25,6 @@ def getAll(request):
     return render(request, 'blog/home.html', {'articles': articles})
 
 
-def homePage(request, article_id):
-    article = models.Article.objects.get(article_id)
+def getPage(request, article_id):
+    article = models.Article.objects.get(pk=article_id)
     return render(request, 'blog/home_page.html', {'article': article})
