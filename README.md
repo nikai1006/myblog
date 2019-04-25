@@ -46,3 +46,4 @@ python manage runserver [ip:port]
 
 - [django](https://docs.djangoproject.com/en/2.2/)
 - [Django教程](http://www.runoob.com/django/django-first-app.html)
+- [Django Path](https://www.cnblogs.com/polly-ling/p/9315645.html)
