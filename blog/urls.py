@@ -29,4 +29,5 @@ urlpatterns = [
     path('article/', views.getuser),
     path('articles/', views.getAll),
     path('article/<int:article_id>/', views.getPage, name='article_page'),
+    path('update/', views.edit_page)
 ]

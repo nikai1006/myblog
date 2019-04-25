@@ -28,3 +28,7 @@ def getAll(request):
 def getPage(request, article_id):
     article = models.Article.objects.get(pk=article_id)
     return render(request, 'blog/home_page.html', {'article': article})
+
+
+def edit_page(request):
+    return render(request, 'blog/update.html')
