@@ -59,6 +59,13 @@ python manage.py shell
 ```bash
 python manage runserver [ip:port]
 ```
+#### 多环境下运行指定环境
+```bash
+python manage.py runserver --settings=myblog.settings.base
+python manage.py runserver --settings=myblog.settings.local
+python manage.py runserver --settings=myblog.settings.prd
+python manage.py runserver --settings=myblog.settings.test
+```
 
 #### 参考资料
 
@@ -66,3 +73,4 @@ python manage runserver [ip:port]
 - [Django教程](http://www.runoob.com/django/django-first-app.html)
 - [Django Path](https://www.cnblogs.com/polly-ling/p/9315645.html)
 - [Python3.7安装mysqlclient](https://cloud.tencent.com/developer/article/1372417)
+- [Django多环境配置](https://www.jianshu.com/p/ae85eac23f46)
