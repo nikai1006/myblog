@@ -5,6 +5,11 @@
 django-admin startproject myblog
 ```
 
+#### 安装MySQL驱动
+```bash
+pip install mysqlclient
+```
+
 #### 创建应用
 1. 打开命令行，进入项目中manage.py同级目录
 2. 命令行输入：python manage.py startapp blog
@@ -60,3 +65,4 @@ python manage runserver [ip:port]
 - [django](https://docs.djangoproject.com/en/2.2/)
 - [Django教程](http://www.runoob.com/django/django-first-app.html)
 - [Django Path](https://www.cnblogs.com/polly-ling/p/9315645.html)
+- [Python3.7安装mysqlclient](https://cloud.tencent.com/developer/article/1372417)
