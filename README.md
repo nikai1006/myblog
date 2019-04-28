@@ -17,6 +17,10 @@ pip install mysqlclient
 
 #### 生成数据表
 [Model field refence](https://docs.djangoproject.com/en/1.10/ref/models/fields/)
+- 新建数据库
+```mysql
+CREATE DATABASE `myblog` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+```
 
 #### 生成数据表
 1.  打开命令行，进入项目中manage.py同级目录
