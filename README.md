@@ -5,6 +5,12 @@
 django-admin startproject myblog
 ```
 
+#### 安装依赖
+```bash
+python3 -m pip install -r requirement.txt
+
+```
+
 #### 安装MySQL驱动
 ```bash
 pip install mysqlclient
