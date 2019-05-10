@@ -84,3 +84,4 @@ python manage.py runserver --settings=myblog.settings.test
 - [Django Path](https://www.cnblogs.com/polly-ling/p/9315645.html)
 - [Python3.7安装mysqlclient](https://cloud.tencent.com/developer/article/1372417)
 - [Django多环境配置](https://www.jianshu.com/p/ae85eac23f46)
+- [rest_framework_swagger](https://www.jianshu.com/p/d7b614b85a74)

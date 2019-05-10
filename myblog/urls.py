@@ -17,12 +17,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from blog.api.myapi import SwaggerSchemaView
+from rest_framework.schemas import get_schema_view
+from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
 
 # import blog.views as nikai
 from blog import views as nikai
 
+
+schema_view = get_schema_view(title='my API', renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer]
+                              , permission_classes=())
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # path('docs/', SwaggerSchemaView.as_view(), name='apiDocs'),
+    path('docs/', schema_view, name='apiDocs'),
     path('index/', nikai.index),
     path('blog/', include('blog.urls', namespace='blog')),
     path('blog2/', include('blog2.urls')),

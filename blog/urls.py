@@ -19,6 +19,7 @@ from django.urls import path, re_path
 
 # import blog.views as nikai
 from . import views
+from .api.myapi import SwaggerSchemaView
 
 # 此处的app_name要和myblog种urls中的namespace保持一致
 app_name = "blog"
@@ -30,5 +31,6 @@ urlpatterns = [
     path('articles/', views.getAll),
     path('article/<int:article_id>/', views.getPage, name='article_page'),
     path('update/<int:article_id>', views.edit_page, name='edit_page'),
-    path('edit/action', views.edit_action, name='edit_action')
+    path('edit/action', views.edit_action, name='edit_action'),
+    path('api/swagger', SwaggerSchemaView.get, name='get_json'),
 ]
