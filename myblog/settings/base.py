@@ -122,63 +122,63 @@ STATIC_URL = '/static/'
 
 
 # rest framework相关
-# REST_FRAMEWORK = {
-#     # 下面这一行表示接口文档的访问权限, AllowAny不做权限限制.
-#     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
-#     # 'PAGE_SIZE': 10,
-#     'PAGINATE_BY':10,
-# }
-
-
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.TokenAuthentication',
-    ),
-    'DEFAULT_PAGINATION_CLASS': (
-        'rest_framework.pagination.PageNumberPagination',
-    ),
-    'EXCEPTION_HANDLER': (
-        'api_test.common.common.custom_exception_handler'
-        # 'EXCEPTION_HANDLER': 'my_project.my_app.utils.custom_exception_handler'
-    )
+    # 下面这一行表示接口文档的访问权限, AllowAny不做权限限制.
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
+    # 'PAGE_SIZE': 10,
+    'PAGINATE_BY':10,
 }
 
 
-# SWAGGER_SETTINGS = {
-#     # 基础样式
-#     'SECURITY_DEFINITIONS': {
-#         "basic":{
-#             'type': 'basic'
-#         }
-#     },
-#     # 如果需要登录才能够查看接口文档, 登录的链接使用restframework自带的.
-#     'LOGIN_URL': 'rest_framework:login',
-#     'LOGOUT_URL': 'rest_framework:logout',
-#     # 'DOC_EXPANSION': None,
-#     # 'SHOW_REQUEST_HEADERS':True,
-#     # 'USE_SESSION_AUTH': True,
-#     # 'DOC_EXPANSION': 'list',
-#     # 接口文档中方法列表以首字母升序排列
-#     'APIS_SORTER': 'alpha',
-#     # 如果支持json提交, 则接口文档中包含json输入框
-#     'JSON_EDITOR': True,
-#     # 方法列表字母排序
-#     'OPERATIONS_SORTER': 'alpha',
-#     'VALIDATOR_URL': None,
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAuthenticated',
+#     ),
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.TokenAuthentication',
+#     ),
+#     'DEFAULT_PAGINATION_CLASS': (
+#         'rest_framework.pagination.PageNumberPagination',
+#     ),
+#     'EXCEPTION_HANDLER': (
+#         'myblog.util.common.custom_exception_handler'
+#         # 'EXCEPTION_HANDLER': 'my_project.my_app.utils.custom_exception_handler'
+#     )
 # }
 
 
 SWAGGER_SETTINGS = {
+    # 基础样式
     'SECURITY_DEFINITIONS': {
-        'basic': {
-            'type': 'basic',
+        "basic":{
+            'type': 'basic'
         }
     },
-    'USE_SESSION_AUTH': True
+    # 如果需要登录才能够查看接口文档, 登录的链接使用restframework自带的.
+    'LOGIN_URL': 'rest_framework:login',
+    'LOGOUT_URL': 'rest_framework:logout',
+    # 'DOC_EXPANSION': None,
+    # 'SHOW_REQUEST_HEADERS':True,
+    # 'USE_SESSION_AUTH': True,
+    # 'DOC_EXPANSION': 'list',
+    # 接口文档中方法列表以首字母升序排列
+    'APIS_SORTER': 'alpha',
+    # 如果支持json提交, 则接口文档中包含json输入框
+    'JSON_EDITOR': True,
+    # 方法列表字母排序
+    'OPERATIONS_SORTER': 'alpha',
+    'VALIDATOR_URL': None,
 }
 
-LOGIN_URL = 'rest_framework:login'
-LOGOUT_URL = 'rest_framework:logout'
+
+# SWAGGER_SETTINGS = {
+#     'SECURITY_DEFINITIONS': {
+#         'basic': {
+#             'type': 'basic',
+#         }
+#     },
+#     'USE_SESSION_AUTH': True
+# }
+#
+# LOGIN_URL = 'rest_framework:login'
+# LOGOUT_URL = 'rest_framework:logout'

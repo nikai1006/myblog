@@ -20,6 +20,7 @@ from django.urls import path, include
 from blog.api.myapi import SwaggerSchemaView
 from rest_framework.schemas import get_schema_view
 from rest_framework_swagger.renderers import SwaggerUIRenderer, OpenAPIRenderer
+from rest_framework.permissions import AllowAny
 
 # import blog.views as nikai
 from blog import views as nikai
