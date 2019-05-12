@@ -77,6 +77,12 @@ python manage.py runserver --settings=myblog.settings.prd
 python manage.py runserver --settings=myblog.settings.test
 ```
 
+#### 安装suit-2
+```bash
+pip uninstall django-suit
+pip install https://github.com/darklow/django-suit/tarball/v2
+```
+
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
@@ -85,3 +91,4 @@ python manage.py runserver --settings=myblog.settings.test
 - [Python3.7安装mysqlclient](https://cloud.tencent.com/developer/article/1372417)
 - [Django多环境配置](https://www.jianshu.com/p/ae85eac23f46)
 - [rest_framework_swagger](https://www.jianshu.com/p/d7b614b85a74)
+- [suit](https://django-suit.readthedocs.io/en/develop/getting_started.html)

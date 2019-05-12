@@ -27,3 +27,4 @@ celery==4.2.0
 django-celery==3.2.2
 celery-with-redis==3.0
 django-redis-sessions==0.6.1
+django-suit==0.2.25
