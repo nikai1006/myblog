@@ -37,6 +37,4 @@ blog2/migrations/__pycache__/
 myblog/__pycache__/
 myblog/settings/__pycache__/
 
-report-task.txt
-.sonar_lock
-
+.scannerwork
