@@ -92,3 +92,5 @@ pip install https://github.com/darklow/django-suit/tarball/v2
 - [Django多环境配置](https://www.jianshu.com/p/ae85eac23f46)
 - [rest_framework_swagger](https://www.jianshu.com/p/d7b614b85a74)
 - [suit](https://django-suit.readthedocs.io/en/develop/getting_started.html)
+- [sonar-scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
+- [Sonar Webhooks](http://10.2.17.107:9000/documentation/project-administration/webhooks/)
