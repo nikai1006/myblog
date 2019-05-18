@@ -94,3 +94,4 @@ pip install https://github.com/darklow/django-suit/tarball/v2
 - [suit](https://django-suit.readthedocs.io/en/develop/getting_started.html)
 - [sonar-scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner)
 - [Sonar Webhooks](http://10.2.17.107:9000/documentation/project-administration/webhooks/)
+- [django docker](https://github.com/ffreitasalves/django-boards)
