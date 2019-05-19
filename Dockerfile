@@ -1,4 +1,4 @@
-FROM python:3.7.3
+FROM python:3.7.3-alpine3.9
 MAINTAINER nikai nikai.ni@klook.com
 
 #RUN apt-get update \
@@ -12,4 +12,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000", "--settings=myblog.settings.local"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000", "--settings=myblog.settings.mysql"]
