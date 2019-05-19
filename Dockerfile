@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 #COPY requirements.txt ./
 COPY . .
 RUN pip install -r requirements.txt
-RUN pip uninstall django-suit && pip install https://github.com/darklow/django-suit/tarball/v2
+RUN pip install https://github.com/darklow/django-suit/tarball/v2
 
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000", "--settings=myblog.settings.docker"]
