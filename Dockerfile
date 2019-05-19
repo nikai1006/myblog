@@ -1,4 +1,4 @@
-FROM python:3.7.3-alpine3.9
+FROM python:3.7.3
 MAINTAINER nikai nikai.ni@klook.com
 
 #RUN apt-get update \
