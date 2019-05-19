@@ -5,7 +5,7 @@ MAINTAINER nikai nikai.ni@klook.com
 #    && apt-get install -y --no-install-recommends \
 #        postgresql-client \
 #    && rm -rf /var/lib/apt/lists/*
-ENV TARGET "local"
+ARG TARGET="local"
 
 WORKDIR /usr/src/app
 #COPY requirements.txt ./
