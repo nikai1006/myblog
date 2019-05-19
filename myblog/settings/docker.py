@@ -7,7 +7,7 @@ DATABASES = {
         'NAME': 'myblog',
         'USER': 'test',
         'PASSWORD': '123456',
-        'HOST': 'nikai.org',
+        'HOST': '192.168.100.5',
         'PORT': '3306',
     }
 }
