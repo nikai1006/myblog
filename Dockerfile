@@ -14,4 +14,5 @@ RUN pip install -r requirements.txt
 RUN pip install https://github.com/darklow/django-suit/tarball/v2
 
 EXPOSE 8000
-ENTRYPOINT ["/bin/sh","","python", "manage.py", "runserver", "0.0.0.0:8000", "--settings=myblog.settings.${TARGET}"]
+ENTRYPOINT ["/bin/sh","","python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD [ "--settings=myblog.settings.local"]
