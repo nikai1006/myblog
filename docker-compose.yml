@@ -1,0 +1,11 @@
+version: 1.0.0
+services:
+  web:
+    image: python:3.7
+  python:
+    image: python:3.7.3
+  db:
+    image: mysql:5.7.26
+networks:
+  myblog-net:
+    driver: bridge
