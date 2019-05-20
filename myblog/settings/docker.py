@@ -7,7 +7,7 @@ DATABASES = {
         'NAME': 'myblog',
         'USER': 'test',
         'PASSWORD': '123456',
-        'HOST': '192.168.100.5',
+        'HOST': 'dockerdb',
         'PORT': '3306',
     }
 }
