@@ -83,6 +83,11 @@ pip uninstall django-suit
 pip install https://github.com/darklow/django-suit/tarball/v2
 ```
 
+#### 制作镜像
+进入Dockerfile同级目录下，执行如下
+```bash
+ docker build -t myblog:1.0 .
+```
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
