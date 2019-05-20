@@ -88,6 +88,16 @@ pip install https://github.com/darklow/django-suit/tarball/v2
 ```bash
  docker build -t myblog:1.0 .
 ```
+- 启动
+```bash
+docker run --name tapd2 -p 18000:8000 -d myblog --settings=myblog.settings.local
+```
+- 初始化数据库
+```bash
+ docker exec -it tapd bash
+ python manage.py makemigrations [app_names...] --settings=myblog.settings.local
+ python manage.py migrate --settings=myblog.settings.local
+```
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
