@@ -96,3 +96,4 @@ pip install https://github.com/darklow/django-suit/tarball/v2
 - [Sonar Webhooks](http://10.2.17.107:9000/documentation/project-administration/webhooks/)
 - [django docker](https://github.com/ffreitasalves/django-boards)
 - [entrypoint](https://yanbin.blog/pass-arguments-to-docker-container/#more-8608)
+- [django-docker-demo](https://github.com/xander-ye/docker_test)
