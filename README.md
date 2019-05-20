@@ -9,6 +9,8 @@ django-admin startproject myblog
 ```bash
 python3 -m pip install -r requirement.txt
 
+国外仓库慢的话可以使用国内清华镜像仓库
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirement.txt
 ```
 
 #### 安装MySQL驱动
