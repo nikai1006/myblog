@@ -38,3 +38,4 @@ myblog/__pycache__/
 myblog/settings/__pycache__/
 
 .scannerwork
+*_env/
