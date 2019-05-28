@@ -12,5 +12,5 @@ if __name__ == '__main__':
     output = os.popen('java -version')
     print(output.read())
     print("---------------------------------------")
-    (status, output) = commands.getstatusoutput('cat /proc/cpuinfo')
+    (status, output) = commands.getstatusoutput('java -version')
     print(status, output)
