@@ -28,3 +28,5 @@ celery-with-redis
 django-redis-sessions==0.6.1
 mysqlclient==1.4.2
 django-rest-swagger==2.1.2
+commands==0.1
+django-commands==0.8
