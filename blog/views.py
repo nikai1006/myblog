@@ -8,7 +8,17 @@ from . import models
 # 类似java的controller
 
 def index(request):
-    return HttpResponse('Hello,boy')
+    print(request.path)
+
+    meta_ = request.META
+    if meta_ is not None:
+        if 'HTTP_HOST' in meta_:
+            host_ = meta_['HTTP_HOST']
+            print(host_)
+        # for key in meta_:
+        #     print(key + "=" + meta_[key])
+
+    return HttpResponse(host_)
 
 
 def getuser(request):
