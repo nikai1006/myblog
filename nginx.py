@@ -3,9 +3,9 @@ Nginx控制程序
 """
 
 import os
-import commands
 import paramiko
 import time
+# import commands
 
 WORK_PATH = os.getcwd()
 ssh = paramiko.SSHClient()
@@ -24,11 +24,11 @@ def exe_cmd(cmd, t=0.1):
 
 if __name__ == '__main__':
     print(WORK_PATH)
-    output = os.popen('java -version')
+    output = os.popen('sudo nginx -t')
     print(output.read())
     print("---------------------------------------")
-    (status, output) = commands.getstatusoutput('java -version')
-    print(status, output)
+    # (status, output) = commands.getstatusoutput('java -version')
+    # print(status, output)
     # 切换root账号
     resp = exe_cmd("su root", t=1)
     if resp.endswith(u"密码："):
