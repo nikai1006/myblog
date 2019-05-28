@@ -7,13 +7,15 @@ from . import models
 # Create your views here.
 # 类似java的controller
 
+HTTP_HOST = 'HTTP_HOST'
+
 def index(request):
     print(request.path)
 
     meta_ = request.META
     if meta_ is not None:
-        if 'HTTP_HOST' in meta_:
-            host_ = meta_['HTTP_HOST']
+        if HTTP_HOST in meta_:
+            host_ = meta_[HTTP_HOST]
             print(host_)
         # for key in meta_:
         #     print(key + "=" + meta_[key])
