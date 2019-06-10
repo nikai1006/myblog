@@ -1,13 +1,13 @@
-from django.shortcuts import render
 from django.http import HttpResponse
+from django.shortcuts import render
 
-from . import models
-
+from . import models, util
 
 # Create your views here.
 # 类似java的controller
 
 HTTP_HOST = 'HTTP_HOST'
+
 
 def index(request):
     print(request.path)
@@ -61,3 +61,8 @@ def edit_action(request):
     article.content = content
     article.save()
     return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
+
+
+def count(request):
+    results = util.cout_user("C:\\Users\oeasy\Desktop\split.log")
+    return render(request, 'count/home.html', {'results': results})
