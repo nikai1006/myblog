@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-from . import models, util
+from . import models
 
 # Create your views here.
 # 类似java的controller
@@ -61,8 +61,3 @@ def edit_action(request):
     article.content = content
     article.save()
     return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
-
-
-def count(request):
-    results = util.cout_user("C:\\Users\oeasy\Desktop\split.log")
-    return render(request, 'count/home.html', {'results': results})
