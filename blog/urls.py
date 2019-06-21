@@ -29,7 +29,6 @@ urlpatterns = [
     path('index/', views.index2),
     path('article/', views.getuser),
     path('articles/', views.getAll),
-    path('count/', views.count),
     path('article/<int:article_id>/', views.getPage, name='article_page'),
     path('update/<int:article_id>', views.edit_page, name='edit_page'),
     path('edit/action', views.edit_action, name='edit_action'),
