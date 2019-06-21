@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 from . import models
+from .tasks import *
+from django.http import JsonResponse
 
 # Create your views here.
 # 类似java的controller
@@ -61,3 +63,15 @@ def edit_action(request):
     article.content = content
     article.save()
     return render(request, 'blog/home.html', {'articles': models.Article.objects.all()})
+
+
+def do(request):
+    """
+    任务
+    :param request:
+    :return:
+    """
+    print("start do task")
+    BlogTask.delay()
+    print("end do task")
+    return JsonResponse({"result": "success"})

@@ -4,6 +4,7 @@ from celery.task import Task
 
 
 class BlogTask(Task):
+    name = 'blog-task'
 
     def run(self, *args, **kwargs):
         print('start task...')
