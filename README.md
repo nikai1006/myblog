@@ -128,6 +128,13 @@ pip install supervisor
 start: supervisor -c /etc/supervisord.conf
 tool: supervisorctl
 ```
+- 创建一份新的supervisor配置
+```bash
+make conf
+echo_supervisord_conf > conf/supervisord.conf
+```
+- 开启supervisor http服务
+把supervisord.conf中int_http_server部分的注释解开
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
