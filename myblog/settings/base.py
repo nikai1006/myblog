@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
 import os
+from myblog.celeryconfig import *
+
+# celery
+BROKER_BACKEND = 'redis'
+BROKER_URL = "redis://nikai.io:6379/0"
+CELERY_RESULT_BACKEND = "redis://nikai.io:6379/2"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -30,7 +36,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'suit',
+    # 'suit',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_swagger',
+    'djcelery',
     'blog',
     'blog2',
 ]
@@ -121,15 +128,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
 # rest framework相关
 REST_FRAMEWORK = {
     # 下面这一行表示接口文档的访问权限, AllowAny不做权限限制.
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
     # 'PAGE_SIZE': 10,
-    'PAGINATE_BY':10,
+    'PAGINATE_BY': 10,
 }
-
 
 # REST_FRAMEWORK = {
 #     'DEFAULT_PERMISSION_CLASSES': (
@@ -151,7 +156,7 @@ REST_FRAMEWORK = {
 SWAGGER_SETTINGS = {
     # 基础样式
     'SECURITY_DEFINITIONS': {
-        "basic":{
+        "basic": {
             'type': 'basic'
         }
     },
@@ -170,7 +175,6 @@ SWAGGER_SETTINGS = {
     'OPERATIONS_SORTER': 'alpha',
     'VALIDATOR_URL': None,
 }
-
 
 # SWAGGER_SETTINGS = {
 #     'SECURITY_DEFINITIONS': {

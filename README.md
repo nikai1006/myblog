@@ -100,6 +100,12 @@ docker run --name tapd2 -p 18000:8000 -d myblog --settings=myblog.settings.local
  python manage.py makemigrations [app_names...] --settings=myblog.settings.local
  python manage.py migrate --settings=myblog.settings.local
 ```
+
+#### celery
+启动命令
+```bash
+python manage.py celery worker -l INFO
+```
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)
@@ -114,3 +120,4 @@ docker run --name tapd2 -p 18000:8000 -d myblog --settings=myblog.settings.local
 - [django docker](https://github.com/ffreitasalves/django-boards)
 - [entrypoint](https://yanbin.blog/pass-arguments-to-docker-container/#more-8608)
 - [django-docker-demo](https://github.com/xander-ye/docker_test)
+- [celery启动报错](https://www.jianshu.com/p/b95bf142dc1b)

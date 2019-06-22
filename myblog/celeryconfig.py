@@ -1,4 +1,5 @@
 import djcelery
+from datetime import timedelta
 
 djcelery.setup_loader()
 
@@ -25,7 +26,7 @@ CELERY_IMPORTS = (
 CELERY_FORCE_EXECV = True
 
 # 深圳并发的worker数量
-CELERY_CONCURRENCY = 4
+CELERYD_CONCURRENCY = 4
 
 # 允许重试
 CELERY_ACKS_LATE = True
@@ -35,3 +36,13 @@ CELERY_MAX_TASKS_PER_CHILD = 100
 
 # 单个任务最大运行时间
 CELERY_TASK_TIME_LIMIT = 12 * 30
+
+CELERYBEAT_SCHEDULE = {
+    'task1': {
+        'task': 'course-task',
+        'schedule': timedelta(seconds=5),
+        'options': {
+            'queue': 'beat_tasks'
+        }
+    }
+}

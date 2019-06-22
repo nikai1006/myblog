@@ -33,5 +33,5 @@ urlpatterns = [
     path('update/<int:article_id>', views.edit_page, name='edit_page'),
     path('edit/action', views.edit_action, name='edit_action'),
     path('api/swagger', SwaggerSchemaView.get, name='get_json'),
-    path('task/','', name='do')
+    path('task/', views.do, name='do')
 ]
