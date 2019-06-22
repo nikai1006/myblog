@@ -28,3 +28,4 @@ django-redis-sessions==0.6.1
 django-rest-swagger==2.1.2
 mysqlclient
 anyjson
+supervisor

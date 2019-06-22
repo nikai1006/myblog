@@ -39,3 +39,7 @@ myblog/settings/__pycache__/
 
 .scannerwork
 *_env/
+*.pid
+*.bak
+*.dat
+*.dir
