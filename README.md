@@ -110,14 +110,23 @@ python manage.py celery worker -l INFO
 ```bash
 python manage.py celery beat -l INFO
 ```
-_flower_为celery的监控组件，需要配合tornado 6.0以下版本
+##### _flower_为celery的监控组件，需要配合tornado 6.0以下版本
+```bash
+pip install flower
+```
 启动命令
 ```bash
 python manage.py celery flower
 ```
-加认证启动
+完整启动命令
 ```bash
-python manage.py celery flower --basic_auth=nikai:123456
+python manage.py celery flower --adress=0.0.0.0 --port=5555 --broker=xxxx --basic_auth=nikai:123456
+```
+#### 进程管理工具：supervisor
+```bash
+pip install supervisor
+start: supervisor -c /etc/supervisord.conf
+tool: supervisorctl
 ```
 #### 参考资料
 
