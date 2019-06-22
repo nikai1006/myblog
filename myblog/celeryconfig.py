@@ -41,6 +41,7 @@ CELERYBEAT_SCHEDULE = {
     'task1': {
         'task': 'blog-task',# 此处配置tasks里面的name
         'schedule': timedelta(seconds=5),
+        'args': ['nikai'],
         'options': {
             'queue': 'beat_tasks'
         }
