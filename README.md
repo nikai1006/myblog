@@ -102,9 +102,13 @@ docker run --name tapd2 -p 18000:8000 -d myblog --settings=myblog.settings.local
 ```
 
 #### celery
-启动命令
+- 启动命令
 ```bash
 python manage.py celery worker -l INFO
+```
+- 启动定时任务
+```bash
+python manage.py celery beat -l INFO
 ```
 #### 参考资料
 
