@@ -110,6 +110,15 @@ python manage.py celery worker -l INFO
 ```bash
 python manage.py celery beat -l INFO
 ```
+_flower_为celery的监控组件，需要配合tornado 6.0以下版本
+启动命令
+```bash
+python manage.py celery flower
+```
+加认证启动
+```bash
+python manage.py celery flower --basic_auth=nikai:123456
+```
 #### 参考资料
 
 - [django](https://docs.djangoproject.com/en/2.2/)

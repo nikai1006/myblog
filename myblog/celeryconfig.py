@@ -39,7 +39,7 @@ CELERY_TASK_TIME_LIMIT = 12 * 30
 
 CELERYBEAT_SCHEDULE = {
     'task1': {
-        'task': 'course-task',
+        'task': 'blog-task',# 此处配置tasks里面的name
         'schedule': timedelta(seconds=5),
         'options': {
             'queue': 'beat_tasks'
