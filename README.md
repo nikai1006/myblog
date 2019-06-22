@@ -125,7 +125,7 @@ python manage.py celery flower --adress=0.0.0.0 --port=5555 --broker=xxxx --basi
 #### 进程管理工具：supervisor
 ```bash
 pip install supervisor
-start: supervisor -c /etc/supervisord.conf
+start: supervisord -c /etc/supervisord.conf
 tool: supervisorctl
 ```
 - 创建一份新的supervisor配置
