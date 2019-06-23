@@ -1,19 +1,12 @@
 FROM python:3.7.3
 MAINTAINER nikai nikai.ni@klook.com
 
-#RUN apt-get update \
-#    && apt-get install -y --no-install-recommends \
-#        postgresql-client \
-#    && rm -rf /var/lib/apt/lists/*
-#ENV TARGET="local"
-
 WORKDIR /usr/src/app
-#COPY requirements.txt ./
 COPY blog blog
 COPY blog2 blog2
 COPY myblog myblog
 COPY docker_conf docker_conf
-ADD Dockerfile2 Dockerfile2
+ADD manage.py manage.py
 ADD requirements.txt requirements.txt
 RUN mkdir logs
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
