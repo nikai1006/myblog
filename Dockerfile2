@@ -13,4 +13,4 @@ RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 RUN pip install https://github.com/darklow/django-suit/tarball/v2
 
 EXPOSE 8000 5555 9001
-ENTRYPOINT supervisord -c docker_conf/suservisord.conf
+ENTRYPOINT supervisord -c /usr/src/app/docker_conf/suservisord.conf
