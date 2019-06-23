@@ -19,6 +19,5 @@ RUN mkdir logs
 RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
 RUN pip install https://github.com/darklow/django-suit/tarball/v2
 
-EXPOSE 8000
-ENTRYPOINT python manage.py runserver '0.0.0.0:8000' "$0"
-CMD ["--settings=myblog.settings.docker"]
+EXPOSE 8000 5555 9001
+ENTRYPOINT supervisord -c docker_conf/suservisord.conf
