@@ -4,11 +4,11 @@ from datetime import timedelta
 djcelery.setup_loader()
 
 CELERY_QUEUES = {
-    'beat_tasks': {
-        'exchange': 'beat_tasks',
-        'exchange_type': 'direct',
-        'binding_key': 'beat_tasks'
-    },
+    # 'beat_tasks': {
+    #     'exchange': 'beat_tasks',
+    #     'exchange_type': 'direct',
+    #     'binding_key': 'beat_tasks'
+    # },
     'work_queue': {
         'exchange': 'beat_tasks',
         'exchange_type': 'direct',

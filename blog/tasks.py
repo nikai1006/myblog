@@ -1,4 +1,4 @@
-import djcelery, time
+import djcelery, time,datetime
 
 from celery.task import Task
 
@@ -11,3 +11,4 @@ class BlogTask(Task):
         time.sleep(4)
         print('args={}, kwargs={}'.format(args, kwargs))
         print('end blog task')
+        return datetime.datetime.strftime(datetime.datetime.now(),"%Y-%m-%d %H:%M:%S")
